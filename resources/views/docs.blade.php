@@ -76,7 +76,7 @@ h2 {
                 <h2>Langkah 1: Akses Halaman Login</h2>
                 <p>Untuk mengakses dashboard login, buka peramban web Anda dan pergi ke URL berikut:</p>
                 <div class="code-snippet">
-                    https://jingyinghunterjob.com//login
+                    https://jingyinghunterjob.com/login
                 </div>
             </div>
 
