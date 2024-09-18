@@ -104,15 +104,15 @@
                                             <div class="d-flex flex-column px-7 py-5">
                                                 <a href="#" class="d-flex align-items-center text-dark text-hover-primary fs-5 fw-bold">{{ Auth::user()->name }}</a>
                                                 
-                                                <a href="{{ route('logout') }}" class="d-flex align-items-center text-muted text-hover-primary fs-6 fw-bold mt-1">
-                                                    <span class="svg-icon svg-icon-3 me-2">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                            <path d="M10.5 3C10.5 2.44772 10.9477 2 11.5 2H17.5C18.0523 2 18.5 2.44772 18.5 3V7C18.5 7.55228 18.0523 8 17.5 8H11.5C10.9477 8 10.5 7.55228 10.5 7V3Z" fill="black" />
-                                                            <path opacity="0.3" d="M17.2071 9.20711C16.8166 9.59763 16.1834 9.59763 15.7929 9.20711L14.5 7.91421L13.2071 9.20711C12.8166 9.59763 12.1834 9.59763 11.7929 9.20711C11.4024 8.81658 11.4024 8.18342 11.7929 7.79289L13.5 6.08579L11.7929 4.37868C11.4024 3.98816 11.4024 3.3549 11.7929 2.96447C12.1834 2.57394 12.8166 2.57394 13.2071 2.96447L14.5 4.25736L15.7929 2.96447C16.1834 2.57394 16.8166 2.57394 17.2071 2.96447C17.5976 3.3549 17.5976 3.98816 17.2071 4.37868L15.5 6.08579L17.2071 7.79289C17.5976 8.18342 17.5976 8.81658 17.2071 9.20711Z" fill="black" />
-                                                        </svg>
-                                                    </span>
-                                                    Sign Out
-                                                </a>
+                                                <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+
+                            <x-dropdown-link :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                {{ __('Log Out') }}
+                            </x-dropdown-link>
+                        </form>
                                             </div>
                                         </div>
                                     </div>

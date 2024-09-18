@@ -12,6 +12,21 @@ color: #3490dc;
 .manual-content p {
 margin-bottom: 20px;
 }
+h2 {
+            color: #555;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .step {
+            margin-bottom: 20px;
+        }
+        .code-snippet {
+            background-color: #eaeaea;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+        }
 
 </style>
 @section('content')
@@ -19,29 +34,33 @@ margin-bottom: 20px;
     <ul class="nav nav-tabs nav-pills flex-row border-0 flex-md-column me-5 mb-3 mb-md-0 fs-6">
         <li class="nav-item me-0 mb-md-2">
             <a class="nav-link btn btn-flex btn-active-light-success" data-bs-toggle="tab" href="#kt_vtab_pane_4">
-                <!--begin::Svg Icon | path: icons/duotune/general/gen001.svg-->
-                <span class="svg-icon svg-icon-2 svg-icon-primary me-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M11 2.375L2 9.575V20.575C2 21.175 2.4 21.575 3 21.575H9C9.6 21.575 10 21.175 10 20.575V14.575C10 13.975 10.4 13.575 11 13.575H13C13.6 13.575 14 13.975 14 14.575V20.575C14 21.175 14.4 21.575 15 21.575H21C21.6 21.575 22 21.175 22 20.575V9.575L13 2.375C12.4 1.875 11.6 1.875 11 2.375Z" fill="black"></path>
-                    </svg>
-                </span>
-                <!--end::Svg Icon-->
+               
                 <span class="d-flex flex-column align-items-start">
                     <span class="fs-4 fw-bolder">Login</span>
                 </span>
             </a>
         </li>
         <li class="nav-item me-0 mb-md-2">
-            <a class="nav-link btn btn-flex btn-active-light-info active" data-bs-toggle="tab" href="#kt_vtab_pane_5">
-                <!--begin::Svg Icon | path: icons/duotune/general/gen003.svg-->
-                <span class="svg-icon svg-icon-2 svg-icon-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M13.0079 2.6L15.7079 7.2L21.0079 8.4C21.9079 8.6 22.3079 9.7 21.7079 10.4L18.1079 14.4L18.6079 19.8C18.7079 20.7 17.7079 21.4 16.9079 21L12.0079 18.8L7.10785 21C6.20785 21.4 5.30786 20.7 5.40786 19.8L5.90786 14.4L2.30785 10.4C1.70785 9.7 2.00786 8.6 3.00786 8.4L8.30785 7.2L11.0079 2.6C11.3079 1.8 12.5079 1.8 13.0079 2.6Z" fill="black"></path>
-                    </svg>
-                </span>
-                <!--end::Svg Icon-->
+            <a class="nav-link btn btn-flex" data-bs-toggle="tab" href="#kt_vtab_pane_5">
+               
                 <span class="d-flex flex-column align-items-start">
                     <span class="fs-4 fw-bolder">Pemberi Kerja</span>
+                </span>
+            </a>
+        </li>
+        <li class="nav-item me-0 mb-md-2">
+            <a class="nav-link btn btn-flex" data-bs-toggle="tab" href="#kt_vtab_pane_6">
+                
+                <span class="d-flex flex-column align-items-start">
+                    <span class="fs-4 fw-bolder">Post Lowongan</span>
+                </span>
+            </a>
+        </li>
+        <li class="nav-item me-0 mb-md-2">
+            <a class="nav-link btn btn-flex" data-bs-toggle="tab" href="#kt_vtab_pane_7">
+                
+                <span class="d-flex flex-column align-items-start">
+                    <span class="fs-4 fw-bolder">Dashboard</span>
                 </span>
             </a>
         </li>
@@ -51,9 +70,93 @@ margin-bottom: 20px;
         <div class="tab-pane fade" 
              id="kt_vtab_pane_4" 
              role="tabpanel">
-             {!! $content !!}
+             <h1>Dashboard Login - Panduan Pengguna</h1>
+
+            <div class="step">
+                <h2>Langkah 1: Akses Halaman Login</h2>
+                <p>Untuk mengakses dashboard login, buka peramban web Anda dan pergi ke URL berikut:</p>
+                <div class="code-snippet">
+                    https://jingyinghunterjob.com//login
+                </div>
+            </div>
+
+            <div class="step">
+                <h2>Langkah 2: Masukkan Email dan Password</h2>
+                <p>Pada halaman login, masukkan nama pengguna dan kata sandi Anda di kolom yang tersedia:</p>
+                <img src="{{ asset('assets/media/login.png') }}" width="300px">
+            </div>
+
+            <div class="step">
+                <h2>Langkah 3: Login</h2>
+                <p>Setelah memasukkan kredensial, klik tombol "Login" untuk mengakses dashboard.</p>
+            </div>
+
+            <div class="step">
+                <h2>Langkah 4: Menavigasi Dashboard</h2>
+                <p>Setelah berhasil login, Anda akan diarahkan ke dashboard di mana Anda bisa mengelola akun, melihat laporan, dan melakukan tugas lainnya. Menu dashboard terletak di sisi kiri halaman untuk navigasi yang mudah.</p>
+            </div>
         </div>
-        <div class="tab-pane fade active show" id="kt_vtab_pane_5" role="tabpanel">Nulla est ullamco ut irure incididunt nulla Lorem Lorem minim irure officia enim reprehenderit. Magna duis labore cillum sint adipisicing exercitation ipsum. Nostrud ut anim non exercitation velit laboris fugiat cupidatat. Commodo esse dolore fugiat sint velit ullamco magna consequat voluptate minim amet aliquip ipsum aute laboris nisi. Labore labore veniam irure irure ipsum pariatur mollit magna in cupidatat dolore magna irure esse tempor ad mollit. Dolore commodo nulla minim amet ipsum officia consectetur amet ullamco voluptate nisi commodo ea sit eu.</div>
+        <div class="tab-pane fade" 
+             id="kt_vtab_pane_5" 
+             role="tabpanel">
+             <h1>Menambahkan Data Pemberi Kerja - Panduan Pengguna</h1>
+             <div class="step">
+                <h2>Langkah 1: Klik Menu Pemberi Kerja Disebelah Kiri</h2>  
+                
+             </div>
+             <div class="step">
+                <h2>Langkah 2: Klik Klik Tobol Add Client Disebelah kana</h2>  
+                <img src="{{ asset('assets/media/peberi_kerja.png') }}" width="900px">
+             </div>
+             <div class="step">
+                <h2>Langkah 3: Isi Form Client, kemudian submit jika sudah selesai</h2>  
+                <img src="{{ asset('assets/media/add_pemberi_kerja.png') }}" width="400px">
+             </div>
+             <div class="step">
+                <h2>Langkah 4: List Pemberi Kerja</h2>  
+                <img src="{{ asset('assets/media/post_loker.png') }}" width="900px">
+             </div>
+            
+        </div>
+        <div class="tab-pane fade" 
+             id="kt_vtab_pane_6" 
+             role="tabpanel">
+             <h1>Posting Lowongan Kerja - Panduan Pengguna</h1>
+             <div class="step">
+                <h2>Langkah 1: Klik Menu Pemberi Kerja Disebelah Kiri</h2>  
+                
+             </div>
+             <div class="step">
+                <h2>Langkah 2: Klik Klik Tobol Post pada baris pemberi kerja Disebelah kana</h2>  
+                <img src="{{ asset('assets/media/peberi_kerja.png') }}" width="900px">
+             </div>
+             <div class="step">
+                <h2>Langkah 3: Isi Nama lowongan dan kualifikasi</h2>  
+                <img src="{{ asset('assets/media/post_loker.png') }}" width="900px">
+             </div>
+             <div class="step">
+                <h2>Langkah 4: Tambahkan Kategori Pekerjaan Jika Belu Ada</h2>  
+                <img src="{{ asset('assets/media/add_category.png') }}" width="900px">
+             </div>
+             <div class="step">
+                <h2>Langkah 5: Pilih Kategori Pekerjaan</h2>  
+                <img src="{{ asset('assets/media/pilih_kategory.png') }}" width="900px">
+             </div>
+             <div class="step">
+                <h2>Langkah 6: submit jika sudah selesai, maka halaman akan otomatis ddipindahkan kehalaman Lowongan kerja yang tersedia</h2>
+                <img src="{{ asset('assets/media/pekerjaan_tersedia.png') }}" width="900px">
+             </div>
+            
+        </div>
+        <div class="tab-pane fade" 
+             id="kt_vtab_pane_7" 
+             role="tabpanel">
+             <h1>Dashboard - Panduan Pengguna</h1>
+             <div class="step">
+                <h2>Dashboard Berisika data-data pelamar yang masuk</h2>
+                <img src="{{ asset('assets/media/dashboard.png') }}" width="900px">
+             </div>
+        </div>
     </div>
 </div>
 @endsection
