@@ -52,17 +52,46 @@
                             </p>
                             <div class="row g-4">
                                 
-                                <div class="col-sm-6">
-                                    <a href="https://api.whatsapp.com/send/?phone=6285213490358&text=Hello+JING+YING+HUNTER&type=phone_number&app_absent=0" target="_blank" class="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0">{{ __('messages.pencari') }}</a>
-                                    
+                                <div class="col-sm-4">
+                                    <a href="https://api.whatsapp.com/send/?phone=6285213490358&text=Hello+JING+YING+HUNTER&type=phone_number&app_absent=0" 
+                                       target="_blank" 
+                                       class="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0">{{ __('messages.pencari') }}</a>
                                 </div>
-                                <div class="col-sm-6">
-                                    <a href="https://api.whatsapp.com/send/?phone=6281267890233&text=Hello+JING+YING+HUNTER&type=phone_number&app_absent=0" target="_blank" class="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0">{{ __('messages.pemberi') }}</a>
+                                <div class="col-sm-3">
+                                    <a href="https://api.whatsapp.com/send/?phone=6281267890233&text=Hello+JING+YING+HUNTER&type=phone_number&app_absent=0" 
+                                       target="_blank" 
+                                       class="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0">{{ __('messages.pemberi') }}</a>
                                 </div>
+                                <div class="col-sm-5">
+                                    <a href="javascript:void(0)" 
+                                    class="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0"
+                                    data-bs-toggle="modal" data-bs-target="#wechatModal">{{ __('messages.pemberi') }} Via WeChat</a>
+                                </div>
+
                                 
                             </div>
                         
                         </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="wechatModal" tabindex="-1" aria-labelledby="wechatModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="wechatModalLabel">Contact Via WeChat</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                   
+                                    <img src="wechat.png" alt="WeChat QR Code" class="img-fluid">
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="col-xl-5 wow fadeInRight" data-wow-delay="0.2s">
                         <div class="bg-primary rounded position-relative overflow-hidden">

@@ -76,6 +76,7 @@
                 text: "You clicked the button!",
                 icon: "success"
                 });
+                
             })
             .catch(error => {
                 Swal.fire({
