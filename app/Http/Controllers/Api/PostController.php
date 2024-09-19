@@ -17,4 +17,13 @@ class PostController extends Controller
             'message' => 'Users retrieved successfully.',
         ], 200);
     } 
+
+    public function soft_delete($id){
+        $data = Post::where('id',$id)->delete();
+        
+        return response()->json([
+            'error'=>false,
+            'message' => 'Users retrieved successfully.',
+        ], 200);
+    }
 }

@@ -11,6 +11,7 @@
             <th>Category</th>
             <th>Deskripsi</th>
             <th>Gaji</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -37,6 +38,7 @@
                     </td>
                     <td>{!! $row->deskripsi !!}</td>
                     <td>{{ $row->gaji }}</td>
+                    <td><a href="javascrio:void(0)" class="btn btn-danger" onclick="delete_data({{ $row->id }})">Hapus</a></td>
                 </tr>
             @endforeach
         @endif
@@ -58,6 +60,39 @@
 @push('custom-scripts')
 <script>
     $("#kt_datatable_example_1").DataTable();
+    function delete_data(id){
+    Swal.fire({
+        title: "Do you want to delete?",
+        showDenyButton: true,
+        showCancelButton: false,
+        confirmButtonText: "Delete"
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            axios.get('/api/post-delete/'+id)
+            .then(response => {
+                Swal.fire({
+                title: "Good job!",
+                text: "You clicked the button!",
+                icon: "success"
+                });
+            })
+            .catch(error => {
+                Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Something went wrong!"
+                });
+            });
+        } else if (result.isDenied) {
+            Swal.fire("Changes are not saved", "", "info");
+        }
+    });
+    
+} 
+
 </script>
+
+
 
 @endpush
