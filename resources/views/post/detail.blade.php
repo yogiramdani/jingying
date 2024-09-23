@@ -8,10 +8,10 @@
                 <div class="card">
                 <!--begin::Body-->
                     <div class="card-header">
-                        <h3>{{ $job->judul }} - {{ $job->nama_perusahaan }}</h3>
+                        <h3>{{ $job->judul }}</h3>
                     </div>
                     <div class="card-body">
-                        <p><strong>Location:</strong> {{ $job->lokasi }}</p>
+                        <!-- <p><strong>Location:</strong> {{ $job->lokasi }}</p> -->
                         <p><strong>Salary:</strong> {{ $job->gaji }}</p>
                         <p><strong>Description:</strong></p>
                         <div class="fs-5">{!! $job->deskripsi !!}</div>
