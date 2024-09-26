@@ -28,7 +28,12 @@
                     @foreach($pelamar as $row)
                     <tr>
                         <th>{{ $no }}</th>
-                        <th>{{ $row->nama_lengkap }}</th>
+                        <th>
+                            {{ $row->nama_lengkap }}<br/>
+                            <a href="{{ asset('storage/'.$row->file_cv) }}" 
+                               class="btn btn-primary btn-sm"
+                               target="blank">Download CV</a>
+                        </th>
                         <th>{{ $row->judul }} <br>{{ $row->nama_perusahaan }}</th>
                         <th>{{ date('d F Y',strtotime($row->created_at)) }}</th>
                         <th>{{ $row->gaji_permintaan }}</th>
