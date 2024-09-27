@@ -107,6 +107,13 @@ class PemberikerjaController extends Controller
     public function job_posting(Request $request){
         $data = $request->all();
 
+        if (isset($data['poster']) && $data['poster']->isValid()) {
+            // Save the file in the 'public/posters' directory and get the filename
+            $posterFileName = $data['poster']->store('posters', 'public');
+        } else {
+            $posterFileName = null; // Handle the case where no file is uploaded
+        }
+
         $insert = [
             "judul" => $data['judul'],
             "category" => json_encode($data['category']),
@@ -115,6 +122,7 @@ class PemberikerjaController extends Controller
             "id_client" => $data['id_client'],
             "created_at" => now(),  // Add timestamps if necessary
             "updated_at" => now(),
+            "poster" => $posterFileName,
             "content_lang"=>"id"
         ];
 

@@ -3,7 +3,7 @@
 @section('title', 'Job Seeker')
 
 @section('content')
-<form action="{{ route('job-posting') }}" method="post">
+<form action="{{ route('job-posting') }}" method="post" enctype="multipart/form-data">
 <div class="row">
     
         @csrf 
@@ -22,6 +22,10 @@
                     <div class="mb-10">
                         <label class="form-label">Judul</label>
                         <input type="text" class="form-control" name="judul" required>
+                    </div>
+                    <div class="mb-10">
+                        <label class="form-label">Poster</label>
+                        <input type="file" class="form-control" name="poster" required>
                     </div>
                     <div class="mb-10">
                         <label class="form-label">Gaji</label>
