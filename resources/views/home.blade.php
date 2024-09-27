@@ -149,6 +149,29 @@
             </div>
         </div>
         <!-- About End -->
+        <div class="container-fluid blog pb-5">
+    <div class="container pb-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h1 class="text-primary">Gallery</h1>
+        </div>
+        <div class="owl-carousel blog-carousel wow fadeInUp" id="owl-carousel">
+            @if(!empty($job))
+                @foreach($job as $row_job)
+                    <div class="blog-item p-4">
+                        <div class="blog-img mb-4">
+                            <img src="{{ asset('storage/app/public/'.$row_job->poster) }}" class="img-fluid w-100 rounded" alt="">
+                            
+                        </div>
+                        
+                    </div>
+                @endforeach
+            @endif
+            
+        </div>
+    </div>
+</div>
+
+
 <!-- Services Start -->
 <div class="container-fluid service pb-5">
     <div class="container pb-5">
@@ -157,26 +180,21 @@
             <h1 class="display-5 mb-4">{{ __('messages.tag_lowongan') }}</h1>
         </div>
         <div class="row g-4">
-        <div class="owl-carousel blog-carousel wow fadeInUp" data-wow-delay="0.2s">
             @if(!empty($job))
                 @foreach($job as $row_job)
-                <div class="blog-item p-4">
-                        <div class="blog-img mb-4">
-                            <img src="{{ asset('storage/app/public/'.$row_job->poster) }}" class="img-fluid w-100 rounded" alt="">
-                            <div class="blog-title">
-                                <a href="{{ route('detail-job',['id'=>$row_job->id]) }}" class="btn">{{ strtoupper($row_job->judul)}}</a>
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="{{ asset('storage/app/public/'.$row_job->poster) }}" class="img-fluid rounded-top w-100" alt="Image">
                             </div>
-                        </div>
-                        <a class="btn btn-primary rounded-pill py-2 px-4 mt-3" 
-                                   href="{{ route('detail-job',['id'=>$row_job->id]) }}">
-                                   {{ __('messages.learn') }}
+                            <div class="rounded-bottom p-4">
+                                <a href="#" class="h4 d-inline-block mb-4"> 
+                                    {{ strtoupper($row_job->judul)}}
                                 </a>
-                        <p class="mb-4">
-                            {!! Str::limit($row_job->deskripsi, 150, '...') !!}
-                        </p>
-                        <div class="d-flex align-items-center">
-                            <div class="ms-3">
-                            @php 
+                                <p class="mb-4">
+                                    {!! Str::limit($row_job->deskripsi, 150, '...') !!}
+                                </p>
+                                @php 
                                     $category = json_decode($row_job->category);
                                 @endphp
                                 @if(!empty($category))
@@ -184,17 +202,16 @@
                                     <i data-feather="tag" style="color:#3d75b6"></i> {{ $cat->judul }}
                                     @endforeach
                                 @endif
+                                <br/>
+                                <a class="btn btn-primary rounded-pill py-2 px-4 mt-3" 
+                                   href="{{ route('detail-job',['id'=>$row_job->id]) }}">
+                                   {{ __('messages.learn') }}
+                                </a>
                             </div>
                         </div>
                     </div>
                 @endforeach
             @endif
-        
-                    
-                    
-                </div>
-        
-            
         </div>
         <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
         <a class="btn btn-primary rounded-pill py-2 px-4 mt-3" href="{{ route('all-jobs') }}" style="text-align:center">
@@ -210,5 +227,7 @@
 @endsection
 
 @push('scripts')
-
+<script>
+    
+</script>
 @endpush

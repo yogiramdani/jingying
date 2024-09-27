@@ -42,6 +42,29 @@
             p.mandarin {
                 font-family: 'Noto Sans SC', sans-serif;
             }
+            .owl-nav-custom {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .owl-prev-custom, .owl-next-custom {
+                background-color: #3d75b6;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                font-size: 24px;
+                position: relative;
+                z-index: 1000;
+            }
+
+            .owl-prev-custom:hover, .owl-next-custom:hover {
+                background-color: #2c5b93;
+            }
+
             
         </style>
         
@@ -218,6 +241,35 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         @yield('scripts')
     @stack('custom-scripts')
+    <script>
+        $(document).ready(function(){
+            $('#owl-carousel').owlCarousel({
+                items: 3, // Number of items to display
+                loop: true, // Enable looping
+                margin: 10, // Spacing between items
+                nav: true, // Enable next/prev navigation
+                dots: true, // Enable dots
+                autoplay: false, // Autoplay disabled
+                navText: [
+                    '<i class="fa fa-angle-left"></i>', // Left arrow icon
+                    '<i class="fa fa-angle-right"></i>' // Right arrow icon
+                ],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            });
+        });
+
+
+    </script>
   
          
         <!-- Template Javascript -->
