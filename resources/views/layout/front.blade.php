@@ -152,10 +152,19 @@
                             </div>
                            
                             <div class="d-flex">
-                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-facebook-f text-white"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-twitter text-white"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-instagram text-white"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-circle me-0" href="#"><i class="fab fa-linkedin-in text-white"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" 
+                                   href="https://www.facebook.com/share/13X38RVy37/?mibextid=qi2Omg"
+                                   target="blank"><i class="fab fa-facebook-f text-white"></i></a>
+                                
+                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" 
+                                   href="https://www.instagram.com/hunterjingying?igsh=MXY3NmZkejdwZ3FmMQ=="
+                                   target="blank"><i class="fab fa-instagram text-white"></i></a>
+                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" 
+                                   href="https://www.tiktok.com/@jingyinghunter?_t=8q44QFXZbWc&_r=1"
+                                   target="blank"><i class="fab fa-tiktok text-white"></i></a>
+
+
+
                             </div>
                         </div>
                     </div>

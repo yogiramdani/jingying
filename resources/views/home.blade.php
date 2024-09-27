@@ -20,10 +20,15 @@
                                         <div class="d-flex align-items-center justify-content-center justify-content-md-end">
                                             <h2 class="text-white me-2">{{ __('messages.follow') }}:</h2>
                                             <div class="d-flex justify-content-end ms-2">
-                                                <a class="btn btn-md-square btn-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                                <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i class="fab fa-twitter"></i></a>
-                                                <a class="btn btn-md-square btn-light rounded-circle mx-2" href=""><i class="fab fa-instagram"></i></a>
-                                                <a class="btn btn-md-square btn-light rounded-circle ms-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                                                <a class="btn btn-md-square btn-light rounded-circle me-2" 
+                                                   href="https://www.facebook.com/share/13X38RVy37/?mibextid=qi2Omg"
+                                                   target="blank"><i class="fab fa-facebook-f"></i></a>
+                                                <a class="btn btn-md-square btn-light rounded-circle mx-2" 
+                                                   href="https://www.instagram.com/hunterjingying?igsh=MXY3NmZkejdwZ3FmMQ=="
+                                                   target="blank"><i class="fab fa-instagram"></i></a>
+                                                <a class="btn btn-md-square btn-light rounded-circle mx-2" 
+                                                   href="https://www.tiktok.com/@jingyinghunter?_t=8q44QFXZbWc&_r=1"
+                                                   target="blank"><i class="fab fa-tiktok"></i></a>
                                             </div>
                                         </div>
                                     </div>
