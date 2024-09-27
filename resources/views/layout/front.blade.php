@@ -159,10 +159,12 @@
                                 <a class="btn btn-primary btn-sm-square rounded-circle me-3" 
                                    href="https://www.instagram.com/hunterjingying?igsh=MXY3NmZkejdwZ3FmMQ=="
                                    target="blank"><i class="fab fa-instagram text-white"></i></a>
-                                <a class="btn btn-primary btn-sm-square rounded-circle me-3" 
-                                   href="https://www.tiktok.com/@jingyinghunter?_t=8q44QFXZbWc&_r=1"
-                                   target="blank"><i class="fab fa-tiktok text-white"></i></a>
 
+                                   <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="javascript:void(0);" 
+                                                   data-bs-toggle="modal" data-bs-target="#tiktok_modal">
+                                                    <i class="fab fa-tiktok"></i>
+                                                    </a>
+                                
 
 
                             </div>
