@@ -35,6 +35,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/job-posting', [PemberikerjaController::class, 'job_posting'])->name('job-posting');
 
     Route::get('/post', [PostConntroller::class, 'index'])->name('post');
+    Route::get('/post-edit/{id}', [PostConntroller::class, 'edit'])->name('post-edit');
+    Route::post('/job-update', [PostConntroller::class, 'update'])->name('job-update');
 });
 
 require __DIR__.'/auth.php';

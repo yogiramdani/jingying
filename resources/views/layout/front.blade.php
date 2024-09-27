@@ -128,12 +128,7 @@
                     <div class="col-md-6 col-lg-6 col-xl-4">
                         <div class="footer-item">
 
-                            <!-- <iframe loading="lazy" 
-                                    src="https://maps.google.com/maps?q=%E9%9B%85%E5%8A%A0%E8%BE%BE%EF%BC%8C%E5%AE%89%E6%9F%AF%E5%B0%94&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" 
-                                    title="Ancol, Jakarta" 
-                                    height="400px"
-                                    aria-label="Ancol, Jakarta"></iframe>
-                         -->
+                           
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-4">

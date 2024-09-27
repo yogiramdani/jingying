@@ -38,7 +38,10 @@
                     </td>
                     <td>{!! $row->deskripsi !!}</td>
                     <td>{{ $row->gaji }}</td>
-                    <td><a href="javascrio:void(0)" class="btn btn-danger" onclick="delete_data({{ $row->id }})">Hapus</a></td>
+                    <td>
+                        <a href="javascrio:void(0)" class="btn btn-danger btn-sm" onclick="delete_data({{ $row->id }})">Hapus</a>
+                        <a href="{{ route('post-edit',['id'=>$row->id]) }}" class="btn btn-warning btn-sm">Rubah</a>
+                    </td>
                 </tr>
             @endforeach
         @endif
