@@ -50,5 +50,12 @@ $apply = [
     "upload_cv" => "Unggah CV"
 ];
 
-return array_merge($front, $jobs, $contact_us, $button, $apply);
+$buka=[
+    "buka"=>"Buka",
+    "sj"=>"Senin - Jumat : 08:30 - 17:30",
+    "s"=>"Sabtu : 08:30 - 13:00",
+    "mer"=>"Minggu dan Tanggal Merah Libur"
+];
+
+return array_merge($front, $jobs, $contact_us, $button, $apply,$buka);
 ?>

@@ -50,5 +50,14 @@ $apply=[
     "upload_cv"=>"Upload CV"
 ];
 
+$buka = [
+    "buka" => "Open",
+    "sj" => "Monday - Friday: 08:30 - 17:30",
+    "s" => "Saturday: 08:30 - 13:00",
+    "mer" => "Sunday and Public Holidays Closed"
+];
 
-return array_merge($front, $jobs, $contact_us, $button,$apply);
+
+
+
+return array_merge($front, $jobs, $contact_us, $button,$apply,$buka);

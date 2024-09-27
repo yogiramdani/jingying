@@ -42,6 +42,7 @@
             p.mandarin {
                 font-family: 'Noto Sans SC', sans-serif;
             }
+            
         </style>
         
     </head>
@@ -150,6 +151,14 @@
                                 <i class="fa fa-phone-alt text-primary me-3"></i>
                                 <p class="text-white mb-0">085213490358</p>
                             </div>
+                            <div class="d-flex align-items-center">
+                                <p class="text-white mb-0">
+                                {{ __('messages.buka') }} <br/>
+                                {{ __('messages.sj') }}<br/>
+                                {{ __('messages.s') }}<br/>
+                                {{ __('messages.mer') }}<br/>
+                                </p>
+                            </div>
                            
                             <div class="d-flex">
                                 <a class="btn btn-primary btn-sm-square rounded-circle me-3" 
@@ -215,9 +224,7 @@
         @yield('scripts')
     @stack('custom-scripts')
   
-            <script>
-                
-            </script>
+         
         <!-- Template Javascript -->
         <script src="/v2/js/main.js"></script>
         <script>

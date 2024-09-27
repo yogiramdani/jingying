@@ -50,5 +50,12 @@ $apply = [
     "upload_cv" => "上传简历"
 ];
 
-return array_merge($front, $jobs, $contact_us, $button, $apply);
+$buka = [
+    "buka" => "营业",
+    "sj" => "星期一至星期五：08:30 - 17:30",
+    "s" => "星期六：08:30 - 13:00",
+    "mer" => "星期日和公共假期休息"
+];
+
+return array_merge($front, $jobs, $contact_us, $button, $apply,$buka);
 ?>
