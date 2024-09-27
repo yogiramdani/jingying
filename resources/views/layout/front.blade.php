@@ -194,6 +194,7 @@
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+        
 
         
         <!-- JavaScript /v2/libraries -->
@@ -212,7 +213,9 @@
         @yield('scripts')
     @stack('custom-scripts')
   
-
+            <script>
+                
+            </script>
         <!-- Template Javascript -->
         <script src="/v2/js/main.js"></script>
         <script>

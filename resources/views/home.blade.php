@@ -26,9 +26,10 @@
                                                 <a class="btn btn-md-square btn-light rounded-circle mx-2" 
                                                    href="https://www.instagram.com/hunterjingying?igsh=MXY3NmZkejdwZ3FmMQ=="
                                                    target="blank"><i class="fab fa-instagram"></i></a>
-                                                <a class="btn btn-md-square btn-light rounded-circle mx-2" 
-                                                   href="https://www.tiktok.com/@jingyinghunter?_t=8q44QFXZbWc&_r=1"
-                                                   target="blank"><i class="fab fa-tiktok"></i></a>
+                                                   <a class="btn btn-md-square btn-light rounded-circle mx-2" href="javascript:void(0);" 
+                                                   data-bs-toggle="modal" data-bs-target="#tiktok_modal">
+                                                    <i class="fab fa-tiktok"></i>
+                                                    </a>
                                             </div>
                                         </div>
                                     </div>
@@ -40,6 +41,46 @@
                
             </div>
             <!-- Carousel End -->
+            <div class="modal fade" id="tiktok_modal" tabindex="-1" aria-labelledby="tiktokModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tiktokModalLabel">TIKTOK JING YING HUNTER</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12"> <!-- Center align the button -->
+                        <a class="" 
+                           href="https://www.tiktok.com/@lowkerterbaru23?_t=8q44JL9BCAJ&_r=1" 
+                           target="_blank"> <!-- Fixed target attribute -->
+                           <i class="fab fa-tiktok"></i> @lowkerterbaru23
+                        </a>
+                    </div>
+                    <div class="col-md-12"> <!-- Center align the button -->
+                        <a class="" 
+                           href="https://www.tiktok.com/@lowkerterbaru24?_t=8q44MwiXTVP&_r=1" 
+                           target="_blank"> <!-- Fixed target attribute -->
+                           <i class="fab fa-tiktok"></i> @lowkerterbaru24
+                        </a>
+                    </div>
+                    <div class="col-md-12"> <!-- Center align the button -->
+                        <a class="" 
+                           href="https://www.tiktok.com/@jingyinghunter?_t=8q44QFXZbWc&_r=1" 
+                           target="_blank"> <!-- Fixed target attribute -->
+                           <i class="fab fa-tiktok"></i> @jingyinghunter
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 @endsection
 @section('content') 
 @php
