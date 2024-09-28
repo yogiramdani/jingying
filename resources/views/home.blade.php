@@ -152,7 +152,6 @@
         <div class="container-fluid blog pb-5">
     <div class="container pb-5">
         <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-            <h1 class="text-primary">Gallery</h1>
         </div>
         <div class="owl-carousel blog-carousel wow fadeInUp" id="owl-carousel">
             @if(!empty($job))
