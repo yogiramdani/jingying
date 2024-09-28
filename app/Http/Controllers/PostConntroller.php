@@ -35,7 +35,11 @@ class PostConntroller extends Controller
 
     public function all_jobs(Request $request)
     {
-        $job = Post::select("posts.*","clients.nama_perusahaan")->join("clients","clients.id","=","posts.id_client")->get();
+        $session =session('locale')?session('locale'):"id";
+        $job = Post::select("posts.*","clients.nama_perusahaan")
+                    ->join("clients","clients.id","=","posts.id_client")
+                    ->where("content_lang",$session)
+                    ->get();
         if(!empty($job)){
             foreach($job as $row){
                 $filter=[];

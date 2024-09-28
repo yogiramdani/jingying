@@ -10,7 +10,7 @@ use App\Models\Category;
 class HomeConntroller extends Controller
 {
     public function index(){
-        $session =session('locale')?session('locale'):"en";
+        $session =session('locale')?session('locale'):"id";
         $job = Post::select("posts.*","clients.nama_perusahaan")->join("clients","clients.id","=","posts.id_client")
                     ->where("content_lang",$session)
                     ->limit(9)
