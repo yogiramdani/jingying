@@ -149,26 +149,26 @@
             </div>
         </div>
         <!-- About End -->
-        <div class="container-fluid blog pb-5">
-    <div class="container pb-5">
-        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-        </div>
-        <div class="owl-carousel blog-carousel wow fadeInUp" id="owl-carousel">
-            @if(!empty($job))
-                @foreach($job as $row_job)
-                    <div class="blog-item p-4">
-                        <div class="blog-img mb-4">
-                            <img src="{{ asset('storage/app/public/'.$row_job->poster) }}" class="img-fluid w-100 rounded" alt="">
-                            
-                        </div>
-                        
-                    </div>
-                @endforeach
-            @endif
-            
-        </div>
-    </div>
-</div>
+        <!-- <div class="container-fluid blog pb-5">
+            <div class="container pb-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                </div>
+                <div class="owl-carousel blog-carousel wow fadeInUp" id="owl-carousel">
+                    @if(!empty($job))
+                        @foreach($job as $row_job)
+                            <div class="blog-item p-4">
+                                <div class="blog-img mb-4">
+                                    <img src="{{ asset('storage/app/public/'.$row_job->poster) }}" class="img-fluid w-100 rounded" alt="">
+                                    
+                                </div>
+                                
+                            </div>
+                        @endforeach
+                    @endif
+                    
+                </div>
+            </div>
+        </div> -->
 
 
 <!-- Services Start -->
