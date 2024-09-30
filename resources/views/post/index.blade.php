@@ -64,36 +64,36 @@
 <script>
     $("#kt_datatable_example_1").DataTable();
     function delete_data(id){
-    Swal.fire({
-        title: "Do you want to delete?",
-        showDenyButton: true,
-        showCancelButton: false,
-        confirmButtonText: "Delete"
-    }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
-        if (result.isConfirmed) {
-            axios.get('/api/post-delete/'+id)
-            .then(response => {
-                Swal.fire({
-                title: "Good job!",
-                text: "You clicked the button!",
-                icon: "success"
+        Swal.fire({
+            title: "Do you want to delete?",
+            showDenyButton: true,
+            showCancelButton: false,
+            confirmButtonText: "Delete"
+        }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                axios.get('/api/post-delete/'+id)
+                .then(response => {
+                    Swal.fire({
+                    title: "Good job!",
+                    text: "You clicked the button!",
+                    icon: "success"
+                    });
+                    
+                })
+                .catch(error => {
+                    Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Something went wrong!"
+                    });
                 });
-                
-            })
-            .catch(error => {
-                Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Something went wrong!"
-                });
-            });
-        } else if (result.isDenied) {
-            Swal.fire("Changes are not saved", "", "info");
-        }
-    });
-    
-} 
+            } else if (result.isDenied) {
+                Swal.fire("Changes are not saved", "", "info");
+            }
+        });
+        
+    } 
 
 </script>
 

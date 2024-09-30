@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Pelamar;
 
 class PostController extends Controller
 {
@@ -24,6 +25,15 @@ class PostController extends Controller
         return response()->json([
             'error'=>false,
             'message' => 'Users retrieved successfully.',
+        ], 200);
+    }
+
+    public function pelamar_delete($id){
+        $data = Pelamar::where('id',$id)->delete();
+        
+        return response()->json([
+            'error'=>false,
+            'message' => 'Pelamar retrieved successfully.',
         ], 200);
     }
 }

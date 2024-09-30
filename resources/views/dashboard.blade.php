@@ -18,6 +18,7 @@
                     <th>Estimasi Gaji</th>
                     <th>Kontak</th>
                     <th>Mandarin Level</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -39,6 +40,7 @@
                         <th>{{ $row->gaji_permintaan }}</th>
                         <th>{{ $row->nomor_wa }}</th>
                         <th>{{ $row->mandarin_level }}</th>
+                        <th><a href="javascrio:void(0)" class="btn btn-danger btn-sm" onclick="delete_data({{ $row->id }})">Hapus</a></th>
                     </tr>
                     @php 
                         $no++;
@@ -54,3 +56,44 @@
 
         
 @endsection
+@push('custom-scripts')
+<script>
+    function delete_data(id) {
+    Swal.fire({
+        title: "Do you want to delete?",
+        showDenyButton: true,
+        showCancelButton: false,
+        confirmButtonText: "Delete"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            axios.get('/api/pelamar-delete/' + id)
+            .then(response => {
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Data has been successfully deleted!",
+                    icon: "success"
+                }).then(() => {
+                    // Reload the page after the success alert
+                    window.location.reload();
+                });
+            })
+            .catch(error => {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Something went wrong!"
+                });
+            });
+        } else if (result.isDenied) {
+            Swal.fire("Changes are not saved", "", "info");
+        }
+    });
+}
+
+
+</script>
+
+
+
+@endpush
+
