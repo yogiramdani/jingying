@@ -33,7 +33,7 @@
         <link href="/v2/css/style.css" rel="stylesheet">
         <style>
             body {
-                font-family: 'Noto Sans SC', sans-serif;
+                font-family: 'monserat  !important';
             }
             h1, h2, h3, h4, h5, h6 {
                 font-family: 'Noto Sans SC', sans-serif;
